@@ -5,11 +5,11 @@ This project simulates real-world ingestion, validation, feature engineering,
 and model training workflows.
 
 ## Project Structure
-
+```
 recomart-reco-pipeline/
 │
-├── data/
-│   ├── raw/            # Raw ingested data
+├── data
+│   ├── raw///            # Raw ingested data
 │   ├── validated/      # Quality-checked data
 │   ├── processed/      # Cleaned and transformed data
 │
@@ -21,4 +21,4 @@ recomart-reco-pipeline/
 ├── model/              # Model training & evaluation
 ├── orchestration/      # Pipeline orchestration
 ├── reports/            # Metrics & reports
-├── logs/               # Execution logs
+├── logs/               # Execution logs ```
