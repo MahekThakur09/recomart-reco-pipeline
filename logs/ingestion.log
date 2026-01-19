@@ -1,0 +1,45 @@
+2026-01-19 16:12:50,321 - INFO - Starting ingestion pipeline
+2026-01-19 16:12:50,321 - INFO - Loading Events.csv
+2026-01-19 16:12:50,322 - ERROR - Error loading events.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:14:14,742 - INFO - Starting ingestion pipeline
+2026-01-19 16:14:14,743 - INFO - Loading Events_1.csv
+2026-01-19 16:14:14,744 - ERROR - Error loading events.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:15:20,414 - INFO - Starting ingestion pipeline
+2026-01-19 16:15:20,415 - INFO - Loading Events_1.csv
+2026-01-19 16:15:20,416 - ERROR - Error loading events.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:16:34,707 - INFO - Starting ingestion pipeline
+2026-01-19 16:16:34,707 - INFO - Loading Events_1.csv
+2026-01-19 16:16:34,708 - ERROR - Error loading events.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:17:19,240 - INFO - Starting ingestion pipeline
+2026-01-19 16:17:19,240 - INFO - Loading Events_1.csv
+2026-01-19 16:17:19,240 - ERROR - Error loading events.csv: name 'Events_1' is not defined
+2026-01-19 16:20:15,803 - INFO - Starting ingestion pipeline
+2026-01-19 16:20:15,803 - INFO - Loading Events_1.csv
+2026-01-19 16:20:15,806 - ERROR - Error loading events.csv: Error tokenizing data. C error: Expected 2 fields in line 27, saw 3
+
+2026-01-19 16:20:25,112 - INFO - Starting ingestion pipeline
+2026-01-19 16:20:25,112 - INFO - Loading Events_1.csv
+2026-01-19 16:20:25,116 - ERROR - Error loading events.csv: Error tokenizing data. C error: Expected 2 fields in line 27, saw 3
+
+2026-01-19 16:22:22,666 - INFO - Starting ingestion pipeline
+2026-01-19 16:22:22,666 - INFO - Loading Events_1.csv
+2026-01-19 16:22:23,091 - INFO - Loaded events with shape: (142921, 2)
+2026-01-19 16:22:23,092 - INFO - Loading itemproperties.csv
+2026-01-19 16:22:23,092 - ERROR - Error loading itemproperties.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:22:42,764 - INFO - Starting ingestion pipeline
+2026-01-19 16:22:42,764 - INFO - Loading Events_1.csv
+2026-01-19 16:22:43,266 - INFO - Loaded events with shape: (142921, 2)
+2026-01-19 16:22:43,267 - INFO - Loading itemproperties.csv
+2026-01-19 16:22:43,268 - ERROR - Error loading itemproperties.csv: 'utf-8' codec can't decode byte 0xb5 in position 1: invalid start byte
+2026-01-19 16:23:25,148 - INFO - Starting ingestion pipeline
+2026-01-19 16:23:25,148 - INFO - Loading Events_1.csv
+2026-01-19 16:23:25,539 - INFO - Loaded events with shape: (142921, 2)
+2026-01-19 16:23:25,539 - INFO - Loading itemproperties.csv
+2026-01-19 16:23:25,700 - INFO - Loaded item properties with shape: (44948, 1)
+2026-01-19 16:23:25,700 - INFO - Ingestion completed successfully
+2026-01-19 16:34:18,710 - INFO - Starting ingestion pipeline
+2026-01-19 16:34:18,710 - INFO - Loading Events_1.csv
+2026-01-19 16:34:19,110 - INFO - Loaded events with shape: (142921, 2)
+2026-01-19 16:34:19,110 - INFO - Loading itemproperties.csv
+2026-01-19 16:34:19,259 - INFO - Loaded item properties with shape: (44948, 1)
+2026-01-19 16:34:19,260 - INFO - Ingestion completed successfully
