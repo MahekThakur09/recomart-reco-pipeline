@@ -1,0 +1,58 @@
+# RecoMart Local Storage Configuration
+# This file configures local storage settings for the data lake
+
+# Local Storage Settings
+storage:
+  base_path: ./data  # Base path for data lake storage
+  enable_partitioning: true  # Enable Hive-style partitioning
+  partition_format: "year={year}/month={month}/day={day}"
+  compression: snappy  # Compression for parquet files
+  file_format: parquet  # Default file format
+  
+  # Retention policies for local storage
+  retention_policy:
+    raw_data_days: 90
+    processed_data_days: 365
+    archive_data_days: 2555  # 7 years
+    temp_files_days: 7
+
+# Directory-specific settings
+# Monitoring and Logging
+monitoring:
+  enabled: true
+  
+  # Metrics to track
+  metrics:
+    - storage_usage
+    - file_count
+    - ingestion_rate
+    - processing_duration
+  
+  # Local logging
+  logging:
+    level: INFO
+    file_retention_days: 30
+    max_file_size_mb: 100
+
+# Local Backup Configuration
+backup:
+  enabled: true
+  backup_path: ./data/backups
+  schedule: "0 2 * * *"  # Daily at 2 AM
+  retention_days: 30
+  compress_backups: true
+
+# Data Validation and Quality
+validation:
+  enabled: true
+  
+  # Data quality checks
+  quality_checks:
+    - null_percentage_threshold: 0.1  # Alert if > 10% null values
+    - duplicate_threshold: 0.05       # Alert if > 5% duplicates
+    - schema_drift_detection: true
+  
+  # File integrity
+  integrity_checks:
+    enable_checksums: true
+    verify_on_read: false

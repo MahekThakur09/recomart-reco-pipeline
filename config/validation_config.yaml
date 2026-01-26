@@ -1,0 +1,96 @@
+# Data Quality Validation Configuration
+# Configuration for RecoMart data validation pipeline
+
+validation:
+  # Data quality thresholds
+  thresholds:
+    missing_data_threshold: 0.10        # 10% threshold for missing data warnings
+    duplicate_threshold: 0.05           # 5% threshold for duplicate warnings
+    outlier_threshold: 0.02             # 2% threshold for outlier detection
+    schema_drift_threshold: 0.95        # 95% schema similarity threshold
+    
+  # Business rules and constraints
+  business_rules:
+    events:
+      required_columns: ['visitorid', 'itemid', 'event', 'timestamp']
+      valid_events: ['view', 'addtocart', 'transaction']
+      max_events_per_session: 1000
+      timestamp_range:
+        start_date: '2020-01-01'
+        end_date: '2030-12-31'
+    
+    products:
+      required_columns: ['id', 'title', 'price']
+      price_range:
+        min: 0
+        max: 10000
+      rating_range:
+        min: 1
+        max: 5
+      stock_constraints:
+        min: 0
+        max: 999999
+    
+    categories:
+      required_columns: ['slug', 'name']
+      max_category_depth: 5
+      
+    item_properties:
+      required_columns: ['itemid', 'property', 'value']
+      max_properties_per_item: 100
+      
+  # Data profiling settings
+  profiling:
+    enable_statistical_profiling: true
+    enable_correlation_analysis: true
+    sample_size: 10000                  # Sample size for large datasets
+    categorical_threshold: 50           # Max unique values for categorical detection
+    
+  # Report generation settings
+  reports:
+    output_format: ['pdf', 'json', 'html']
+    include_visualizations: true
+    detailed_column_analysis: true
+    export_failed_records: true
+    max_failed_records_export: 1000
+    
+  # Great Expectations settings
+  great_expectations:
+    enable: true
+    auto_create_expectations: true
+    expectation_suite_name: 'recomart_data_quality'
+    validation_store_name: 'validations_store'
+    
+# Logging configuration for validation
+logging:
+  level: INFO
+  file: "validation/logs/data_validation.log"
+  max_file_size_mb: 50
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+# Notification settings
+notifications:
+  enable: true
+  email:
+    enable: false
+    smtp_server: "smtp.company.com"
+    recipients: ["data-team@recomart.com"]
+    subject_prefix: "[RecoMart Data Quality]"
+  
+  webhook:
+    enable: false
+    url: "https://hooks.slack.com/services/..."
+    
+# Performance settings
+performance:
+  parallel_processing: true
+  max_workers: 4
+  chunk_size: 50000                    # Rows per chunk for large file processing
+  memory_limit_gb: 8                   # Memory limit for processing
+  
+# Data retention for validation artifacts
+retention:
+  validation_results_days: 90
+  data_profiles_days: 180
+  quality_reports_days: 365

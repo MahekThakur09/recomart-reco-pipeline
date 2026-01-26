@@ -21,4 +21,5 @@ recomart-reco-pipeline/
 ├── model/              # Model training & evaluation
 ├── orchestration/      # Pipeline orchestration
 ├── reports/            # Metrics & reports
-├── logs/               # Execution logs ```
+├── ingestion/          # Data ingestion components
+│   ├── logs/           # Execution logs ```

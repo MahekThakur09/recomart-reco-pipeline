@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug CSV Ingester",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/ingestion/csv_ingester.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false,
+            "python": "/Users/ravi.kachhadiya/workspace/playground/recomart-reco-pipeline/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": []
+        },
+        {
+            "name": "Debug CSV Ingester - Events Only",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/ingestion/csv_ingester.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false,
+            "python": "/Users/ravi.kachhadiya/workspace/playground/recomart-reco-pipeline/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "DEBUG": "1"
+            },
+            "args": ["--events-only"]
+        }
+    ]
+}

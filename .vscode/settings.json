@@ -1,0 +1,18 @@
+{
+    "python.defaultInterpreterPath": "/Users/ravi.kachhadiya/workspace/playground/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "100"],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        ".git": false,
+        "ingestion/logs/*.log": false,
+        "storage/logs/*.log": false
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ]
+}
